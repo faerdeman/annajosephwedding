@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Joseph & Anna</title>
+
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+
+<style>
+
+:root{
+    --bg:#f8f5f0;
+    --gold:#b69b72;
+    --text:#444;
+    --dark:#2f2f2f;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family: Georgia, serif;
+    line-height:1.8;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(5px);
+    text-align:center;
+    padding:18px;
+    box-shadow:0 1px 10px rgba(0,0,0,0.08);
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--dark);
+    margin:0 15px;
+    font-size:0.95rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.hero{
+    height:100vh;
+    background:#ddd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"PLACERA ER BRÖLLOPSBILD HÄR";
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:1.3rem;
+    letter-spacing:2px;
+}
+
+.hero-overlay{
+    background:rgba(255,255,255,0.85);
+    padding:50px;
+    border-radius:10px;
+    z-index:1;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-weight:normal;
+    color:var(--dark);
+}
+
+.hero .date{
+    font-size:1.6rem;
+    margin-top:10px;
+    letter-spacing:3px;
+}
+
+.hero .divider{
+    width:120px;
+    height:1px;
+    background:var(--gold);
+    margin:25px auto;
+}
+
+.hero p{
+    font-size:1.3rem;
+}
+
+section{
+    padding:120px 12%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:3rem;
+    color:var(--dark);
+    margin-bottom:15px;
+}
+
+.section-title p{
+    max-width:700px;
+    margin:auto;
+}
+
+.story-container{
+    display:flex;
+    gap:60px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.story-image{
+    flex:1;
+    min-width:320px;
+    min-height:500px;
+    background:#ddd;
+    border:2px dashed #bbb;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#666;
+}
+
+.story-text{
+    flex:1;
+    min-width:320px;
+}
+
+.story-text h2{
+    margin-bottom:25px;
+    font-size:3rem;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.card h3{
+    margin-bottom:20px;
+    color:var(--gold);
+    font-size:2rem;
+}
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-left:4px solid var(--gold);
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.timeline-time{
+    color:var(--gold);
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-item{
+    height:300px;
+    background:#ddd;
+    border:2px dashed #bbb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#666;
+}
+
+.countdown{
+    text-align:center;
+    font-size:2rem;
+    color:var(--gold);
+    margin-top:30px;
+}
+
+.travel-box{
+    background:white;
+    max-width:900px;
+    margin:auto;
+    padding:40px;
+    border-radius:10px;
+}
+
+.button{
+    display:inline-block;
+    background:var(--gold);
+    color:white;
+    text-decoration:none;
+    padding:16px 40px;
+    border-radius:50px;
+    margin-top:30px;
+    transition:.3s;
+}
+
+.button:hover{
+    opacity:0.9;
+}
+
+.rsvp{
+    text-align:center;
+}
+
+footer{
+    background:#ece5db;
+    text-align:center;
+    padding:80px 20px;
+}
+
+footer h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+footer p{
+    font-size:1.2rem;
+}
+
+@media (max-width:768px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    section{
+        padding:80px 25px;
+    }
+
+    .story-container{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    #omossVår Historia</a>
+    #dagenBröllopsdagen</a>
+    #schemaSchema</a>
+    #resaBoende & Resa</a>
+    #galleriGalleri</a>
+    #osaOSA</a>
+</nav>
+
+<header class="hero">
+
+    <div class="hero-overlay">
+        <h1>Joseph & Anna</h1>
+
+        <p class="date">
+            15 JULI 2027
+        </p>
+
+        <div class="divider"></div>
+
+        <p>
+            Välkommen till vårt bröllop
+        </p>
+
+        <div class="countdown" id="countdown"></div>
+
+    </div>
+
+</header>
+
+<section id="omoss">
+
+    <div class="story-container">
+
+        <div class="story-image">
+            BILD PÅ ER TVÅ
+        </div>
+
+        <div class="story-text">
+
+            <h2>Vår Historia</h2>
+
+            <p>
+                Här kan ni berätta er historia.
+                Hur ni träffades, när ni blev kära,
+                era största äventyr tillsammans och hur
+                resan ledde fram till denna dag.
+            </p>
+
+            <br>
+
+            <p>
+                Vi ser fram emot att få dela vår stora dag
+                tillsammans med familj och vänner.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="dagen">
+
+    <div class="section-title">
+        <h2>När & Var</h2>
+        <p>
+            Här hittar ni all viktig information om dagen.
+        </p>
+    </div>
+
+    <div class="info-grid">
+
+        <div class="card">
+            <h3>Vigsel</h3>
+            <p>Lysekil Kyrka</p>
+            <p>Övre Kyrkogatan 3, 453 30 Lysekil</p>
+            <p>Kl. 16:00</p>
+        </div>
+
+        <div class="card">
+            <h3>Middag</h3>
+            <p>Publik Mat & Bar</p>
+            <p>Norra Hamngatan 1, 453 31 Lysekil</p>
+            <p>Kl. 18:00</p>
+        </div>
+
+        <div class="card">
+            <h3>Klädsel</h3>
+            <p>Valfri klädkod</p>
+            <p>T.ex. Mörk Kostym</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="schema">
+
+    <div class="section-title">
+        <h2>Dagens Schema</h2>
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="timeline-time">16:00 Vigsel</div>
+            Vigsel
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">17:00 Mingel</div>
+            Mingel och fotografering
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">18:00 Middag</div>
+            <p>Middag</p>
+			<p>Publik Mat & Bar</p>
+            <p>Norra Hamngatan 1, 453 31 Lysekil</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="resa">
+
+    <div class="section-title">
+        <h2>Boende & Resa</h2>
+    </div>
+
+    <div class="travel-box">
+
+        <p>
+            Här kan ni lägga information om hotell,
+            parkering, kollektivtrafik, närliggande flygplatser
+            och annat som kan vara bra för gästerna att veta.
+        </p>
+
+        <br>
+
+        <h3>Förslag på boende</h3>
+
+        <ul>
+            <li>
+				<a href="https://hotellsillen.se/">
+					Hotell Sillen
+				</a>
+			</li>
+            <li>
+				<a href="https://www.grandhotellysekil.se/">
+					Grand Hotell
+				</a>
+			</li>
+            <li>
+				<a href="https://strandflickorna.com/">
+					Strandflickorna
+				</a>
+			</li>
+			<li>
+				<a href="https://farmlodge.se/">
+					Farmlodge
+				</a>
+			</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<section id="galleri">
+
+    <div class="section-title">
+        <h2>Galleri</h2>
+        <p>Några av våra favoritminnen tillsammans</p>
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-item">Bild 1</div>
+        <div class="gallery-item">Bild 2</div>
+        <div class="gallery-item">Bild 3</div>
+        <div class="gallery-item">Bild 4</div>
+        <div class="gallery-item">Bild 5</div>
+        <div class="gallery-item">Bild 6</div>
+
+    </div>
+
+</section>
+
+<section id="osa" class="rsvp">
+
+    <div class="section-title">
+        <h2>OSA</h2>
+    </div>
+
+    <p>
+        Vi hoppas att ni vill fira denna dag tillsammans med oss.
+    </p>
+
+    <p>
+        Svara gärna senast <strong>1 juni 2027</strong>.
+    </p>
+
+    #
+        OSA HÄR
+    </a>
+
+    <p style="margin-top:30px;">
+        Meddela gärna allergier eller särskilda kostönskemål.
+    </p>
+
+</section>
+
+<footer>
+
+    <h2>Joseph & Anna</h2>
+
+    <p>
+        Vi längtar efter att få fira vår stora dag tillsammans med er.
+    </p>
+
+</footer>
+
+<script>
+
+const weddingDate = new Date("2027-07-15T14:00:00").getTime();
+
+const countdown = document.getElementById("countdown");
+
+setInterval(() => {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if(distance < 0){
+        countdown.innerHTML = "Den stora dagen är här!";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    countdown.innerHTML =
+        days + " dagar kvar";
+
+}, 1000);
+
+</script>
+
+</body>
+</html>
