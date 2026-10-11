@@ -1,543 +1,141 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Joseph & Anna</title>
-
-https://fonts.googleapis.com
-https://fonts.gstatic.com
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#faf3f2">
+<title>Anna & Joseph · 3 juli 2027 · annaochjoseph.se</title>
 <style>
+:root{--ink:#173f56;--sea:#6e9298;--gold:#b7a077;--cream:#fbf7f0;--pink:#f2d9d9}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:#fcf8f6;color:var(--ink);font-family:"Avenir Next",Avenir,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit} .hero{min-height:92vh;display:grid;place-items:center;text-align:center;padding:5rem 1.25rem;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 28%,#fffdfb 0%,#fbf0ef 55%,#e9eeeb 100%)}
+.hero:before,.hero:after{content:"";position:absolute;inset:20px;border:1px solid var(--gold);pointer-events:none}
+.hero:after{inset:31px;border:1px solid #d7c6a4}
+.hero-inner{position:relative;z-index:1;max-width:760px;padding:2.5rem 1rem}
+.kicker{letter-spacing:.2em;text-transform:uppercase;font-size:.82rem}
+h1,h2,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:400}
+h1{font-size:clamp(3.4rem,9vw,6.6rem);line-height:.98;margin:.8rem 0 1.4rem;letter-spacing:-.04em}
+h2{font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 1.2rem}
+.names{font-size:1.1rem;letter-spacing:.16em;text-transform:uppercase;margin-top:2rem}
+.date{letter-spacing:.13em;text-transform:uppercase;margin-top:.6rem}
+.ornament{color:var(--gold);letter-spacing:.6em;margin:1.5rem 0}
+nav{display:flex;justify-content:center;gap:1.4rem;flex-wrap:wrap;padding:1rem;background:#fff9f8;border-bottom:1px solid #e8ddca;position:sticky;top:0;z-index:10}
+nav a{text-decoration:none;font-size:.82rem;letter-spacing:.06em}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
+section{padding:5.5rem 1.25rem;scroll-margin-top:70px}
+.wrap{max-width:850px;margin:auto;text-align:center}
+section p{font-size:1.08rem;max-width:720px;margin:1rem auto}
+.lead{font-size:clamp(1.2rem,3vw,1.5rem)!important}
+.soft{background:linear-gradient(180deg,#fbf1f0,#edf1ee)}
+.cardrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem;text-align:left}
+.card{padding:1.5rem;background:#fffdfc;border:1px solid #e9d9d4}
+.card h3{font-family:Georgia,serif;font-size:1.35rem;font-weight:400;margin:.1rem 0 .5rem}
+.button{display:inline-block;margin:.7rem .3rem;padding:.75rem 1.2rem;border:1px solid var(--ink);text-decoration:none;letter-spacing:.06em;font-size:.9rem}
+.button:hover{background:var(--ink);color:white}
+.note{font-size:.93rem!important;color:#526c77}
+footer{text-align:center;padding:3rem 1rem;background:#173f56;color:#fff7ed}
+footer p{margin:.3rem}
+.adults-note{position:relative;max-width:730px;margin:2.8rem auto 2.2rem;padding:2.2rem clamp(1.25rem,5vw,3rem);background:#fff7f6;border:1px solid #c5ac80;outline:1px solid #e4d4ba;outline-offset:-10px;box-shadow:0 12px 35px rgba(23,63,86,.06)}
+.adults-note h3{font:400 clamp(1.75rem,4vw,2.4rem)/1.2 Georgia,serif;margin:.25rem 0 1rem;color:var(--ink)}
+.adults-note p{font-size:1.02rem;line-height:1.75}
+.adults-symbol{color:#b49a72;font-size:1.5rem;line-height:1}
+@media(max-width:560px){nav{gap:.65rem;padding:.8rem .4rem}nav a{font-size:.72rem}.hero:before{inset:12px}.hero:after{inset:21px}section{padding:4rem 1.2rem}}
 
-:root{
-    --bg:#f8f5f0;
-    --gold:#b69b72;
-    --text:#444;
-    --dark:#2f2f2f;
-    --white:#ffffff;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:var(--bg);
-    color:var(--text);
-    font-family: Georgia, serif;
-    line-height:1.8;
-}
-
-nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    background:rgba(255,255,255,0.95);
-    backdrop-filter:blur(5px);
-    text-align:center;
-    padding:18px;
-    box-shadow:0 1px 10px rgba(0,0,0,0.08);
-}
-
-nav a{
-    text-decoration:none;
-    color:var(--dark);
-    margin:0 15px;
-    font-size:0.95rem;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
-
-nav a:hover{
-    color:var(--gold);
-}
-
-.hero{
-    height:100vh;
-    background-image: url("LysekilKyrka2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    position:relative;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: rgba(0,0,0,0.25);
-}
-
-.hero-overlay{
-    background:rgba(255,255,255,0.85);
-    padding:50px;
-    border-radius:10px;
-    z-index:1;
-}
-
-.hero h1{
-    font-size:5rem;
-    font-weight:normal;
-    color:var(--dark);
-}
-
-.hero .date{
-    font-size:1.6rem;
-    margin-top:10px;
-    letter-spacing:3px;
-}
-
-.hero .divider{
-    width:120px;
-    height:1px;
-    background:var(--gold);
-    margin:25px auto;
-}
-
-.hero p{
-    font-size:1.3rem;
-}
-
-section{
-    padding:120px 12%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:3rem;
-    color:var(--dark);
-    margin-bottom:15px;
-}
-
-.section-title p{
-    max-width:700px;
-    margin:auto;
-}
-
-.story-container{
-    display:flex;
-    gap:60px;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-.story-image{
-    flex:1;
-    min-width:320px;
-    min-height:500px;
-    background:#ddd;
-    border:2px dashed #bbb;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#666;
-}
-
-.story-text{
-    flex:1;
-    min-width:320px;
-}
-
-.story-text h2{
-    margin-bottom:25px;
-    font-size:3rem;
-}
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px;
-}
-
-.card{
-    background:white;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.08);
-    text-align:center;
-}
-
-.card h3{
-    margin-bottom:20px;
-    color:var(--gold);
-    font-size:2rem;
-}
-
-.timeline{
-    max-width:900px;
-    margin:auto;
-}
-
-.timeline-item{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-left:4px solid var(--gold);
-    box-shadow:0 3px 10px rgba(0,0,0,0.05);
-}
-
-.timeline-time{
-    color:var(--gold);
-    font-size:1.2rem;
-    font-weight:bold;
-}
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.gallery-item{
-    height:300px;
-    background:#ddd;
-    border:2px dashed #bbb;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#666;
-}
-
-.countdown{
-    text-align:center;
-    font-size:2rem;
-    color:var(--gold);
-    margin-top:30px;
-}
-
-.travel-box{
-    background:white;
-    max-width:900px;
-    margin:auto;
-    padding:40px;
-    border-radius:10px;
-}
-
-.button{
-    display:inline-block;
-    background:var(--gold);
-    color:white;
-    text-decoration:none;
-    padding:16px 40px;
-    border-radius:50px;
-    margin-top:30px;
-    transition:.3s;
-}
-
-.button:hover{
-    opacity:0.9;
-}
-
-.rsvp{
-    text-align:center;
-}
-
-footer{
-    background:#ece5db;
-    text-align:center;
-    padding:80px 20px;
-}
-
-footer h2{
-    font-size:3rem;
-    margin-bottom:20px;
-}
-
-footer p{
-    font-size:1.2rem;
-}
-
-@media (max-width:768px){
-
-    nav{
-        display:none;
-    }
-
-    .hero h1{
-        font-size:3rem;
-    }
-
-    section{
-        padding:80px 25px;
-    }
-
-    .story-container{
-        flex-direction:column;
-    }
-}
-
+/* Diskreta havsdetaljer: en enda illustration vid välkomsttexten och en vid sidfoten */
+#dagen .wrap::after{content:"";display:block;width:180px;height:66px;margin:2rem auto 0;background:url("snackor-detalj.svg") center/contain no-repeat;opacity:.72}
+footer::before{content:"";display:block;width:125px;height:46px;margin:0 auto 1.2rem;background:url("snackor-detalj.svg") center/contain no-repeat;opacity:.85}
+.future-note{max-width:720px;margin:3rem auto 2rem;padding:1.4rem 2rem;border-top:1px solid #d7c6a4;border-bottom:1px solid #d7c6a4}.future-note h3{font:400 1.55rem Georgia,serif;margin:.4rem 0;color:var(--ink)}
+.couple-photo{max-width:730px;margin:2.5rem auto .5rem;padding:9px;background:#fffdfb;border:1px solid #d9c4af;box-shadow:0 12px 35px rgba(23,63,86,.08)}
+.couple-photo img{display:block;width:100%;height:auto}
+.restaurant-photo{margin:1rem 0}.restaurant-photo img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;border-radius:7px}.photo-credit{font-size:.72rem;color:#6f7779;text-align:right;margin-top:.4rem}.couple-photo{max-width:730px}
+.lysekil-banner{margin:0;background:#fbf0ef;text-align:center}.lysekil-banner img{display:block;width:100%;height:clamp(230px,37vw,470px);object-fit:cover;object-position:center 55%}.lysekil-banner figcaption{padding:.5rem 1rem;font-size:.73rem;color:#637079} .restaurant-photo{display:none}
+.closing-sea{margin:0;background:#fbf1f0;text-align:center}.closing-sea img{display:block;width:100%;height:clamp(230px,38vw,480px);object-fit:cover;object-position:center 52%}.closing-sea figcaption{padding:.55rem 1rem;font-size:.73rem;color:#637079}
 </style>
 </head>
 <body>
-
-<nav>
-    #omossVår Historia</a>
-    #dagenBröllopsdagen</a>
-    #schemaSchema</a>
-    #resaBoende & Resa</a>
-    #galleriGalleri</a>
-    #osaOSA</a>
-</nav>
-
-<header class="hero">
-
-    <div class="hero-overlay">
-        <h1>Joseph & Anna</h1>
-
-        <p class="date">
-            3 JULI 2027
-        </p>
-
-        <div class="divider"></div>
-
-        <p>
-            Välkommen till vårt bröllop
-        </p>
-
-        <div class="countdown" id="countdown"></div>
-
-    </div>
-
+<header class="hero" id="hem">
+  <div class="hero-inner">
+    <div class="kicker">En somrig dag vid havet</div>
+    <div class="ornament">✧　♡　✧</div>
+    <h1>Välkommen<br>till vårt bröllop</h1>
+    <div class="ornament">──────── ◇ ────────</div>
+    <div class="names">Anna &amp; Joseph</div>
+    <div class="date">3 juli 2027 · Lysekil</div>
+  </div>
 </header>
-
-<section id="omoss">
-
-    <div class="story-container">
-
-        <div class="story-image">
-            BILD PÅ ER TVÅ
-        </div>
-
-        <div class="story-text">
-
-            <h2>Vår Historia</h2>
-
-            <p>
-                Här kan ni berätta er historia.
-                Hur ni träffades, när ni blev kära,
-                era största äventyr tillsammans och hur
-                resan ledde fram till denna dag.
-            </p>
-
-            <br>
-
-            <p>
-                Vi ser fram emot att få dela vår stora dag
-                tillsammans med familj och vänner.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
+<figure class="lysekil-banner">
+ <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/East_Lysekil_-_central_town.jpg?width=1600" alt="Översiktsbild över Lysekil med kyrkan, hamnen och havet" loading="eager">
+ <figcaption>Lysekil sett från havet · Foto: W.carter / Wikimedia Commons (CC0)</figcaption>
+</figure>
+<nav aria-label="Huvudmeny">
+  <a href="#dagen">Vår dag</a><a href="#vigsel">Vigseln</a><a href="#middag">Middagen</a><a href="#boende">Boende</a><a href="#osa">OSA & frågor</a>
+</nav>
+<main>
 <section id="dagen">
-
-    <div class="section-title">
-        <h2>När & Var</h2>
-        <p>
-            Här hittar ni all viktig information om dagen.
-        </p>
-    </div>
-
-    <div class="info-grid">
-
-        <div class="card">
-            <h3>Vigsel</h3>
-            <p>Lysekil Kyrka</p>
-            <p>Övre Kyrkogatan 3, 453 30 Lysekil</p>
-            <p>Kl. 16:00</p>
-        </div>
-
-        <div class="card">
-            <h3>Middag</h3>
-            <p>Publik Mat & Bar</p>
-            <p>Norra Hamngatan 1, 453 31 Lysekil</p>
-            <p>Kl. 18:00</p>
-        </div>
-
-        <div class="card">
-            <h3>Klädsel</h3>
-            <p>Valfri klädkod</p>
-            <p>T.ex. Mörk Kostym</p>
-        </div>
-
-    </div>
-
+ <div class="wrap">
+  <div class="kicker">3 juli 2027</div><h2>Har ni inte planerat sommarens semester ännu?</h2>
+  <p class="lead">Då hoppas vi att ni vill styra kosan mot vackra Lysekil och dela en av livets finaste dagar med oss!</p>
+  <p>Vi önskar oss en enkel och avslappnad dag med människor som betyder mycket för oss.</p>
+ </div>
 </section>
-
-<section id="schema">
-
-    <div class="section-title">
-        <h2>Dagens Schema</h2>
-    </div>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-            <div class="timeline-time">16:00 Vigsel</div>
-            Vigsel
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-time">17:00 Mingel</div>
-            Mingel och fotografering
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-time">18:00 Middag</div>
-            <p>Middag</p>
-			<p>Publik Mat & Bar</p>
-            <p>Norra Hamngatan 1, 453 31 Lysekil</p>
-        </div>
-
-    </div>
-
+<section class="soft" id="vigsel">
+ <div class="wrap">
+  <div class="kicker">Vi säger ja</div><h2>Vigsel i Lysekils kyrka</h2>
+  <p class="lead">Lördagen den 3 juli 2027 kl. 16.00</p>
+  <p>Den 3 juli säger vi ja till varandra i vackra Lysekils kyrka. Att få dela den stunden med er skulle göra vår dag ännu mer minnesvärd.</p>
+  <a class="button" href="https://www.google.com/maps/search/?api=1&query=Lysekils+kyrka" target="_blank" rel="noopener">Hitta till kyrkan ↗</a>
+ </div>
 </section>
-
-<section id="resa">
-
-    <div class="section-title">
-        <h2>Boende & Resa</h2>
-    </div>
-
-    <div class="travel-box">
-
-        <p>
-            Här kan ni lägga information om hotell,
-            parkering, kollektivtrafik, närliggande flygplatser
-            och annat som kan vara bra för gästerna att veta.
-        </p>
-
-        <br>
-
-        <h3>Förslag på boende</h3>
-
-        <ul>
-            <li>
-				<a href="https://hotellsillen.se/">
-					Hotell Sillen
-				</a>
-			</li>
-            <li>
-				<a href="https://www.grandhotellysekil.se/">
-					Grand Hotell
-				</a>
-			</li>
-            <li>
-				<a href="https://strandflickorna.com/">
-					Strandflickorna
-				</a>
-			</li>
-			<li>
-				<a href="https://farmlodge.se/">
-					Farmlodge
-				</a>
-			</li>
-        </ul>
-
-    </div>
-
+<section id="middag">
+ <div class="wrap">
+  <div class="kicker">Efter vigseln</div><h2>En kväll med god mat och härligt sällskap</h2>
+  <p>Därefter promenerar vi tillsammans från kyrkan till restaurang Publik, som ligger på promenadavstånd, för en kväll med god mat, skratt och gemenskap.</p>
+  <aside class="adults-note" aria-labelledby="adults-heading">
+    <div class="adults-symbol" aria-hidden="true">♡</div>
+    <h3 id="adults-heading">En kväll för vuxna</h3>
+    <p>Vi ser fram emot en enkel och avslappnad dag tillsammans med människor som betyder mycket för oss.</p>
+    <p>Eftersom restaurangens lokaler inte är anpassade för små barn har vi valt att låta bröllopsmiddagen bli en kväll för vuxna. Vi hoppas att ni har möjlighet att ordna barnvakt och komma och njuta av en härlig kväll tillsammans med oss, fylld av god mat, skratt och gemenskap.</p>
+  </aside>
+  <div class="cardrow">
+   <div class="card"><h3>Middag</h3><p>Vi samlas på <a href="https://publiklysekil.se/" target="_blank" rel="noopener">Publik i Lysekil ↗</a> för en kväll med god mat och härligt sällskap.</p><p><a href="https://www.google.com/maps/search/?api=1&amp;query=Publik+Lysekil" target="_blank" rel="noopener">Hitta till Publik ↗</a></p></div>
+   <div class="card"><h3>En önskan i stället för presenter</h3><p>Det finaste vi kan få är att dela vår bröllopsdag med er. I stället för presenter önskar vi oss gärna ett frivilligt bidrag till middagen, så att vi tillsammans kan njuta av en härlig kväll. Ni väljer själva om och hur mycket ni vill bidra med.</p><p class="note">Frivilligt bidrag sätts in på konto 9252 8072953 hos SBAB.</p></div>
+  </div>
+  <div class="cardrow">
+   <div class="card"><h3>Klädsel</h3><p>Sommarfint – kom i något ni känner er fina och bekväma i!</p></div>
+  </div>
+ </div>
 </section>
-
-<section id="galleri">
-
-    <div class="section-title">
-        <h2>Galleri</h2>
-        <p>Några av våra favoritminnen tillsammans</p>
-    </div>
-
-    <div class="gallery">
-
-        <div class="gallery-item">Bild 1</div>
-        <div class="gallery-item">Bild 2</div>
-        <div class="gallery-item">Bild 3</div>
-        <div class="gallery-item">Bild 4</div>
-        <div class="gallery-item">Bild 5</div>
-        <div class="gallery-item">Bild 6</div>
-
-    </div>
-
+<section class="soft" id="boende">
+ <div class="wrap">
+  <div class="kicker">Stanna gärna över</div><h2>Boende i Lysekil</h2>
+  <p>För er som vill göra en liten semester av bröllopet finns flera boendealternativ i och omkring Lysekil. Boka gärna i god tid – det är sommar på västkusten!</p>
+  <div class="cardrow">
+   <div class="card"><h3>Hotell Lysekil</h3><a href="https://hotellysekil.se/" target="_blank" rel="noopener">Besök webbplats ↗</a></div>
+   <div class="card"><h3>Strandflickornas Havshotell</h3><a href="https://strandflickorna.com/strandflickornas-havshotell/" target="_blank" rel="noopener">Besök webbplats ↗</a></div>
+   <div class="card"><h3>Hotell Sillen</h3><a href="https://hotelsillen.se/" target="_blank" rel="noopener">Besök webbplats ↗</a></div>
+   <div class="card"><h3>Grand Hotel Lysekil</h3><a href="https://www.grandhotellysekil.se/" target="_blank" rel="noopener">Besök webbplats ↗</a></div>
+   <div class="card"><h3>STF Strandvillan</h3><a href="https://www.svenskaturistforeningen.se/boende/stf-strandvillan-lysekil/" target="_blank" rel="noopener">Besök webbplats ↗</a></div>
+   <div class="card"><h3>Camping</h3><p><a href="https://gullmarsbadenscamping.se/" target="_blank" rel="noopener">Gullmarsbadens camping ↗</a><br><a href="https://www.sivikscampinglysekil.se/" target="_blank" rel="noopener">Siviks camping ↗</a></p></div>
+  </div>
+ </div>
 </section>
-
-<section id="osa" class="rsvp">
-
-    <div class="section-title">
-        <h2>OSA</h2>
-    </div>
-
-    <p>
-        Vi hoppas att ni vill fira denna dag tillsammans med oss.
-    </p>
-	
-	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfnZYR3weabhUA5vb8DLwNBYfKi44u1LED7HTpzA6JL3eVxDw/viewform?embedded=true" width="640" height="731" frameborder="0" marginheight="0" marginwidth="0">Läser in …</iframe>
-
-    <p>
-        Svara gärna senast <strong>1 juni 2027</strong>.
-    </p>
-
-    #
-        OSA HÄR
-    </a>
-
-    <p style="margin-top:30px;">
-        Meddela gärna allergier eller särskilda kostönskemål.
-    </p>
-
+<section id="osa">
+ <div class="wrap">
+  <div class="kicker">Vi hoppas att vi ses</div><h2>OSA & frågor</h2>
+  <p>Vi hoppas att ni vill komma och fira vår stora dag tillsammans med oss! Meddela gärna om ni kommer <strong>senast den 1 mars 2027</strong>. Berätta också om ni har några allergier eller önskemål om specialkost.</p>
+  <p>Har ni frågor eller funderingar inför bröllopet är ni varmt välkomna att kontakta vår värdinna Anna Kihlander via samma mejladress.</p>
+  <p><strong>E-post:</strong> <a href="mailto:osa@annaochjoseph.se">osa@annaochjoseph.se</a></p>
+  <a class="button" href="mailto:osa@annaochjoseph.se?subject=OSA%20br%C3%B6llop%20Anna%20%26%20Joseph">Svara på inbjudan</a>
+  <div class="future-note"><h3>Vi hoppas ses igen sommaren 2028</h3><p>Vi planerar också ett större firande i Stockholm sommaren 2028, då vi vill fira både vårt bröllop och några jämna födelsedagar. För er som inte har möjlighet att komma till Lysekil hoppas vi att vi kan ses då i stället. Mer information kommer längre fram.</p></div>
+  <div class="ornament">♡</div><h2>Vi ser fram emot att fira med er</h2>
+ </div>
 </section>
-
-<footer>
-
-    <h2>Joseph & Anna</h2>
-
-    <p>
-        Vi längtar efter att få fira vår stora dag tillsammans med er.
-    </p>
-
-</footer>
-
-<script>
-
-const weddingDate = new Date("2027-07-15T14:00:00").getTime();
-
-const countdown = document.getElementById("countdown");
-
-setInterval(() => {
-
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    if(distance < 0){
-        countdown.innerHTML = "Den stora dagen är här!";
-        return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    countdown.innerHTML =
-        days + " dagar kvar";
-
-}, 1000);
-
-</script>
-
+</main>
+<figure class="closing-sea">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/St%C3%A5ngehuvud_and_small_islands_in_Lysekil_1.jpg/1280px-St%C3%A5ngehuvud_and_small_islands_in_Lysekil_1.jpg" alt="Havet och granitklipporna vid Stångehuvud i Lysekil" loading="lazy">
+ <figcaption>Stångehuvud i Lysekil · Foto: W.carter / Wikimedia Commons · CC0</figcaption>
+</figure>
+<footer><p class="serif" style="font-size:1.8rem">Anna &amp; Joseph</p><p>3 juli 2027 · Lysekil</p></footer>
 </body>
 </html>

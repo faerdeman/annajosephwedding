@@ -1,0 +1,18 @@
+BRÖLLOPSHEMSIDA – ANNA & JOSEPH
+
+Öppna index.html i en webbläsare för att förhandsgranska hemsidan.
+
+Uppgifter som lagts in:
+- Vigsel: 3 juli 2027 kl. 16.00, Lysekils kyrka
+- Middag: Publik i Lysekil (https://publiklysekil.se/)
+- OSA senast 1 mars 2027
+- E-post för OSA och frågor: osa@annaochjoseph.se
+- Frivilligt bidrag: konto 9252 8072953 hos SBAB
+
+Publicering:
+Den här mappen innehåller en fristående HTML-hemsida, men den är ännu inte publicerad på internet och har ingen offentlig webbadress. För egen webbadress behöver ni välja/registrera domän och koppla den till en webbhotellstjänst eller statisk webbpublicering. Kontrollera att domänen annaochjoseph.se är registrerad och att ni har åtkomst till den innan den används.
+
+Önskad webbadress: https://www.annaochjoseph.se/ (inte registrerad eller publicerad genom denna fil).
+OSA-adressen osa@annaochjoseph.se är oförändrad.
+
+BILDER: Havsbild från Wikimedia Commons (W.carter, CC0). Restaurangbild från Thatsup/Publik och visas via extern bildadress. Bilderna kräver internetuppkoppling. Kontrollera rätt att använda restaurangbilden offentligt, gärna med Publik eller fotografen.
